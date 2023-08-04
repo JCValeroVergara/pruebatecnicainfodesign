@@ -1,18 +1,14 @@
 import React from 'react';
 import { Dashboard, SideBar } from '../../components';
 
-
-
 const Home = () => {
-  
-
   return (
-    <div className="grid grid-cols-sidebar-dashboard">
+    <div className="flex flex-row">
       <div>
-        <SideBar className="col-sidebar" />
+        <SideBar />
       </div>
-      <div>
-        <Dashboard className="col-dashboard" />
+      <div className="w-full px-10">
+        <Dashboard />
       </div>
     </div>
   );

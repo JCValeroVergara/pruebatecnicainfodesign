@@ -11,7 +11,6 @@ import {
   Card,
 } from '@tremor/react';
 
-
 const getAbbreviatedDay = (dateString) => {
   const daysOfWeek = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
 
@@ -24,11 +23,9 @@ const getAbbreviatedDay = (dateString) => {
   return `${year}-${month}-${day} ${dayOfWeek}`;
 };
 
-
-
 const dataFormatter = (number) => {
   return Intl.NumberFormat('us').format(number).toString();
-}
+};
 
 const GraficoTramosDia = ({ tramosDiaData }) => {
   if (!Array.isArray(tramosDiaData)) {
@@ -64,21 +61,18 @@ const GraficoTramosDia = ({ tramosDiaData }) => {
 
   console.log(transformChartData());
 
-
   const value = tramosDiaData.reduce((acc, item) => {
     const linea = item.Linea;
     const consumo = item.consumo;
     if (!acc[linea]) {
-      acc[linea] = []
+      acc[linea] = [];
     }
-    acc[linea].push(consumo)
-    return acc
-  }, {})
-  
-  console.log(categories)
-  console.log(value)
+    acc[linea].push(consumo);
+    return acc;
+  }, {});
 
-  
+  console.log(categories);
+  console.log(value);
 
   return (
     <>

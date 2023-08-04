@@ -67,7 +67,7 @@ const KpiCardMaxMinTramoDia = ({ tramosDiaData }) => {
   const transformedChartData = transformChartData();
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-2 gap-4">
+    <div className="flex flex-row flex-wrap justify-center items-center gap-4">
       <div>
         <Card decoration="top" decorationColor="indigo">
           <Flex //title
@@ -83,15 +83,13 @@ const KpiCardMaxMinTramoDia = ({ tramosDiaData }) => {
             />
           </Flex>
         </Card>
-        <Card
-          className="max-w-lg mx-auto"
-        >
+        <Card className="max-w-lg mx-auto w-full">
           <table className="border-collapse w-full mt-2">
             <thead>
               <tr>
-                <th className="py-2 px-4 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Tramo</th>
+                <th className="py-2 px-4 rounded-tl-md bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Tramo</th>
                 <th className="py-2 px-4 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Consumo</th>
-                <th className="py-2 px-4 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Fecha</th>
+                <th className="py-2 px-4 rounded-tr-md bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Fecha</th>
               </tr>
             </thead>
             <tbody>
@@ -101,8 +99,12 @@ const KpiCardMaxMinTramoDia = ({ tramosDiaData }) => {
                   key={tramo}
                 >
                   <td className="py-2 px-4">{tramo}</td>
-                  <td className="py-2 px-4">{transformedChartData[tramo].maxConsumo}</td>
-                  <td className="py-2 px-4">{transformedChartData[tramo].fechaMaxConsumo}</td>
+                  <td className="py-2 px-4">
+                    {transformedChartData[tramo].maxConsumo}
+                  </td>
+                  <td className="py-2 px-4">
+                    {transformedChartData[tramo].fechaMaxConsumo}
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -124,15 +126,13 @@ const KpiCardMaxMinTramoDia = ({ tramosDiaData }) => {
             />
           </Flex>
         </Card>
-        <Card
-          className="max-w-lg mx-auto"
-        >
+        <Card className="max-w-lg mx-auto">
           <table className="border-collapse w-full mt-2">
             <thead>
               <tr>
-                <th className="py-2 px-4 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Tramo</th>
+                <th className="py-2 px-4 rounded-tl-md bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Tramo</th>
                 <th className="py-2 px-4 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Consumo</th>
-                <th className="py-2 px-4 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Fecha</th>
+                <th className="py-2 px-4 rounded-tr-md bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Fecha</th>
               </tr>
             </thead>
             <tbody>
@@ -142,8 +142,12 @@ const KpiCardMaxMinTramoDia = ({ tramosDiaData }) => {
                   className="border-b border-gray-300 dark:border-gray-500"
                 >
                   <td className="py-2 px-4">{tramo}</td>
-                  <td className="py-2 px-4">{transformedChartData[tramo].minConsumo}</td>
-                  <td className="py-2 px-4">{transformedChartData[tramo].fechaMinConsumo}</td>
+                  <td className="py-2 px-4">
+                    {transformedChartData[tramo].minConsumo}
+                  </td>
+                  <td className="py-2 px-4">
+                    {transformedChartData[tramo].fechaMinConsumo}
+                  </td>
                 </tr>
               ))}
             </tbody>

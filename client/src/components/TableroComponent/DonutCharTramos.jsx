@@ -9,9 +9,13 @@ const DonutChartTramos = ({ tramosData }) => {
     `${Intl.NumberFormat('us').format(number).toString()}`;
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-      <div className="col-span-1">
-        <Card className="max-w-lg" decoration="top" decorationColor="indigo">
+    <div className="flex flex-row flex-wrap justify-center items-center gap-4">
+      <div className="col-span-1 w-[200px]">
+        <Card
+          className="max-w-lg h-[270px] flex flex-col items-center justify-center"
+          decoration="top"
+          decorationColor="indigo"
+        >
           <Flex //title
             className="space-x-0.5"
             justifyContent="start"
@@ -25,7 +29,6 @@ const DonutChartTramos = ({ tramosData }) => {
             />
           </Flex>
           <DonutChart
-            className="mt-4"
             data={tramosData.map((item) => ({
               Linea: item.Linea,
               Consumo: item.consumo,
@@ -37,8 +40,12 @@ const DonutChartTramos = ({ tramosData }) => {
           />
         </Card>
       </div>
-      <div className="col-span-1">
-        <Card className="max-w-lg" decoration="top" decorationColor="indigo">
+      <div className="col-span-1 w-[200px]">
+        <Card
+          className="max-w-lg h-[270px] flex flex-col items-center justify-center"
+          decoration="top"
+          decorationColor="indigo"
+        >
           <Flex //title
             className="space-x-0.5"
             justifyContent="start"
@@ -52,7 +59,6 @@ const DonutChartTramos = ({ tramosData }) => {
             />
           </Flex>
           <DonutChart
-            className="mt-4"
             data={tramosData.map((item) => ({
               Linea: item.Linea,
               Perdidas: item.perdidas,
@@ -64,8 +70,12 @@ const DonutChartTramos = ({ tramosData }) => {
           />
         </Card>
       </div>
-      <div className="col-span-1">
-        <Card className="max-w-lg" decoration="top" decorationColor="indigo">
+      <div className="col-span-1 w-[200px]">
+        <Card
+          className="max-w-lg h-[270px] flex flex-col items-center justify-center"
+          decoration="top"
+          decorationColor="indigo"
+        >
           <Flex //title
             className="space-x-0.5"
             justifyContent="start"
@@ -79,7 +89,6 @@ const DonutChartTramos = ({ tramosData }) => {
             />
           </Flex>
           <DonutChart
-            className="mt-4"
             data={tramosData.map((item) => ({
               Linea: item.Linea,
               Costos: item.costo,
@@ -91,8 +100,12 @@ const DonutChartTramos = ({ tramosData }) => {
           />
         </Card>
       </div>
-      <div className="col-span-1">
-        <Card className="max-w-lg" decoration="top" decorationColor="indigo">
+      <div className="col-span-1 w-[200px]">
+        <Card
+          className="max-w-lg h-[270px] flex flex-col items-center justify-center"
+          decoration="top"
+          decorationColor="indigo"
+        >
           <Flex //title
             className="space-x-0.5"
             justifyContent="start"
@@ -106,7 +119,6 @@ const DonutChartTramos = ({ tramosData }) => {
             />
           </Flex>
           <DonutChart
-            className="mt-4"
             data={tramosData.map((item) => ({
               Linea: item.Linea,
               Costos: item.costo * item.perdidas,

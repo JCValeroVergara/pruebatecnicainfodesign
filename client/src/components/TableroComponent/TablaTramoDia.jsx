@@ -23,12 +23,11 @@ const TramosDiaTable = ({ tramosDiaData }) => {
   }
 
   const [selectedLinea, setSelectedLinea] = useState('all');
-  const [selectedFecha, setSelectedFecha] = useState([]); 
-  
+  const [selectedFecha, setSelectedFecha] = useState([]);
 
   const isTramosDiaSelected = (item) =>
     (item.Linea === selectedLinea || selectedLinea === 'all') &&
-    (selectedFecha.includes(item.Fecha) || selectedFecha.length === 0);
+    (selectedFecha.includes(item.Fecha.split('T')[0]) || selectedFecha.length === 0);
 
   return (
     <>
@@ -78,17 +77,17 @@ const TramosDiaTable = ({ tramosDiaData }) => {
       <Table className="mt-6 overflow-y-auto max-h-[500px]">
         <TableHead className="sticky top-0">
           <TableRow className="sticky top-0">
-            <TableHeaderCell className="text-right bg-gray-50 dark:bg-gray-900">Fecha</TableHeaderCell>
-            <TableHeaderCell className="text-right bg-gray-50 dark:bg-gray-900">Tramos</TableHeaderCell>
-            <TableHeaderCell className="text-right bg-gray-50 dark:bg-gray-900">Consumo</TableHeaderCell>
-            <TableHeaderCell className="text-right bg-gray-50 dark:bg-gray-900">Perdidas</TableHeaderCell>
-            <TableHeaderCell className="text-right bg-gray-50 dark:bg-gray-900">Costo</TableHeaderCell>
-            <TableHeaderCell className="text-right bg-gray-50 dark:bg-gray-900">Costo Total Consumo</TableHeaderCell>
-            <TableHeaderCell className="text-right bg-gray-50 dark:bg-gray-900">Costo Total Perdidas</TableHeaderCell>
+            <TableHeaderCell className="text-right font-bold text-gray-800 dark:text-white bg-gray-50 dark:bg-gray-800 rounded-tl-md">Fecha</TableHeaderCell>
+            <TableHeaderCell className="text-right font-bold text-gray-800 dark:text-white bg-gray-50 dark:bg-gray-800">Tramos</TableHeaderCell>
+            <TableHeaderCell className="text-right font-bold text-gray-800 dark:text-white bg-gray-50 dark:bg-gray-800">Consumo</TableHeaderCell>
+            <TableHeaderCell className="text-right font-bold text-gray-800 dark:text-white bg-gray-50 dark:bg-gray-800">Perdidas</TableHeaderCell>
+            <TableHeaderCell className="text-right font-bold text-gray-800 dark:text-white bg-gray-50 dark:bg-gray-800">Costo</TableHeaderCell>
+            <TableHeaderCell className="text-right font-bold text-gray-800 dark:text-white bg-gray-50 dark:bg-gray-800">Costo Total Consumo</TableHeaderCell>
+            <TableHeaderCell className="text-right font-bold text-gray-800 dark:text-white bg-gray-50 dark:bg-gray-800 rounded-tr-md">Costo Total Perdidas</TableHeaderCell>
           </TableRow>
         </TableHead>
 
-        <TableBody >
+        <TableBody>
           {tramosDiaData
             .filter((item) => isTramosDiaSelected(item))
             .map((item, index) => (

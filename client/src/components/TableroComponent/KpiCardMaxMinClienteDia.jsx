@@ -134,13 +134,13 @@ const KpiCardMaxMinClienteDia = ({ clienteDiaData }) => {
           <table className="border-collapse w-full mt-2">
             <thead>
               <tr>
-                <th className="py-2 px-4 text-sm bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Tramo</th>
+                <th className="py-2 px-4 rounded-tl-md text-sm bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Tramo</th>
                 <th className="py-2 px-4 text-sm bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Max Consumo Comercial</th>
                 <th className="py-2 px-4 text-sm bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Fecha</th>
                 <th className="py-2 px-4 text-sm bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Max Consumo Industrial</th>
                 <th className="py-2 px-4 text-sm bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Fecha</th>
                 <th className="py-2 px-4 text-sm bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Max Consumo Residencial</th>
-                <th className="py-2 px-4 text-sm bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Fecha</th>
+                <th className="py-2 px-4 rounded-tr-md text-sm bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Fecha</th>
               </tr>
             </thead>
             <tbody>
@@ -180,13 +180,13 @@ const KpiCardMaxMinClienteDia = ({ clienteDiaData }) => {
           <table className="border-collapse w-full mt-2">
             <thead>
               <tr>
-                <th className="py-2 px-4 text-sm bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Tramo</th>
+                <th className="py-2 px-4 text-sm rounded-tl-md bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Tramo</th>
                 <th className="py-2 px-4 text-sm bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Min/Cons Comercial</th>
                 <th className="py-2 px-4 text-sm bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Fecha</th>
                 <th className="py-2 px-4 text-sm bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Min/Cons Industrial</th>
                 <th className="py-2 px-4 text-sm bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Fecha</th>
                 <th className="py-2 px-4 text-sm bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Min/Cons Residencial</th>
-                <th className="py-2 px-4 text-sm bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Fecha</th>
+                <th className="py-2 px-4 text-sm rounded-tr-md bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-100 border-b-2 border-gray-300 dark:border-gray-500">Fecha</th>
               </tr>
             </thead>
             <tbody>

@@ -1,7 +1,5 @@
 import { LogoEner } from '../../Icons';
-import { ButtonLanding} from '../../components';
-
-
+import { ButtonLanding } from '../../components';
 
 const HeaderLanding = () => {
   return (
@@ -20,6 +18,6 @@ const HeaderLanding = () => {
       </nav>
     </div>
   );
-}
+};
 
-export default HeaderLanding
+export default HeaderLanding;

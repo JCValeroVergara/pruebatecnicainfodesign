@@ -1,14 +1,13 @@
 
-import './App.css'
-import { Route,Routes, useLocation } from 'react-router-dom'
-import { Landing,Home } from './views/index'
+import { Route, Routes, useLocation } from 'react-router-dom';
+import { Landing, Home } from './views/index';
 
 function App() {
-  const location = useLocation()
+  const location = useLocation();
 
   return (
     <>
-      <div className="App">
+      <div className="App dark:text-white">
         <div>
           <Routes>
             <Route path="/" element={<Landing />} />
@@ -17,7 +16,7 @@ function App() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

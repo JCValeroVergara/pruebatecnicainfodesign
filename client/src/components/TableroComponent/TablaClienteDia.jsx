@@ -27,7 +27,7 @@ const ClienteDiaTable = ({ clienteDiaData }) => {
 
   const isTramosDiaSelected = (item) =>
     (item.Linea === selectedLinea || selectedLinea === 'all') &&
-    (selectedFecha.includes(item.Fecha) || selectedFecha.length === 0);
+    (selectedFecha.includes(item.Fecha.split('T')[0]) || selectedFecha.length === 0);
 
   return (
     <>
@@ -77,17 +77,17 @@ const ClienteDiaTable = ({ clienteDiaData }) => {
       <Table className="mt-6 max-h-[500px] overflow-x-auto w-full">
         <TableHead className="sticky top-0">
           <TableRow className="sticky top-0">
-            <TableHeaderCell className="text-right bg-gray-50 dark:bg-gray-900">Fecha</TableHeaderCell>
-            <TableHeaderCell className="text-right bg-gray-50 dark:bg-gray-900 sticky left-0">Tramos</TableHeaderCell>
-            <TableHeaderCell className="text-right bg-gray-50 dark:bg-gray-900 sticky left-0">Consumo Comercial</TableHeaderCell>
-            <TableHeaderCell className="text-right bg-gray-50 dark:bg-gray-900">Consumo Industrial</TableHeaderCell>
-            <TableHeaderCell className="text-right bg-gray-50 dark:bg-gray-900">Consumo Residencial</TableHeaderCell>
-            <TableHeaderCell className="text-right bg-gray-50 dark:bg-gray-900">Perdidas Comercial</TableHeaderCell>
-            <TableHeaderCell className="text-right bg-gray-50 dark:bg-gray-900">Perdidas Industrial</TableHeaderCell>
-            <TableHeaderCell className="text-right bg-gray-50 dark:bg-gray-900">Perdidas Residencial</TableHeaderCell>
-            <TableHeaderCell className="text-right bg-gray-50 dark:bg-gray-900">Costo Comercial</TableHeaderCell>
-            <TableHeaderCell className="text-right bg-gray-50 dark:bg-gray-900">Costo Industrial</TableHeaderCell>
-            <TableHeaderCell className="text-right bg-gray-50 dark:bg-gray-900">Costo Residencial</TableHeaderCell>
+            <TableHeaderCell className="text-right font-bold text-gray-800 bg-gray-50 dark:bg-gray-800 rounded-tl-md ">Fecha</TableHeaderCell>
+            <TableHeaderCell className="text-right font-bold text-gray-800 bg-gray-50 dark:bg-gray-800 sticky left-0">Tramos</TableHeaderCell>
+            <TableHeaderCell className="text-right font-bold text-gray-800 bg-gray-50 dark:bg-gray-800 sticky left-0">Consumo Comercial</TableHeaderCell>
+            <TableHeaderCell className="text-right font-bold text-gray-800 bg-gray-50 dark:bg-gray-800">Consumo Industrial</TableHeaderCell>
+            <TableHeaderCell className="text-right font-bold text-gray-800 bg-gray-50 dark:bg-gray-800">Consumo Residencial</TableHeaderCell>
+            <TableHeaderCell className="text-right font-bold text-gray-800 bg-gray-50 dark:bg-gray-800">Perdidas Comercial</TableHeaderCell>
+            <TableHeaderCell className="text-right font-bold text-gray-800 bg-gray-50 dark:bg-gray-800">Perdidas Industrial</TableHeaderCell>
+            <TableHeaderCell className="text-right font-bold text-gray-800 bg-gray-50 dark:bg-gray-800">Perdidas Residencial</TableHeaderCell>
+            <TableHeaderCell className="text-right font-bold text-gray-800 bg-gray-50 dark:bg-gray-800">Costo Comercial</TableHeaderCell>
+            <TableHeaderCell className="text-right font-bold text-gray-800 bg-gray-50 dark:bg-gray-800">Costo Industrial</TableHeaderCell>
+            <TableHeaderCell className="text-right font-bold text-gray-800 bg-gray-50 dark:bg-gray-800 rounded-tr-md">Costo Residencial</TableHeaderCell>
           </TableRow>
         </TableHead>
 

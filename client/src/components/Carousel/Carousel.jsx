@@ -1,22 +1,26 @@
 import React from 'react';
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Next, Previous } from '../../Icons';
 
-
-
 const Carousel = () => {
-  const [activeSlide, setActiveSlide] = useState(0)
-  
+  const [activeSlide, setActiveSlide] = useState(0);
+
   const slides = [
-    <img src="/public/Carusel01.jpg" alt="Carusel01" />,
-    <img src="/public/Carusel02.jpg" alt="Carusel02" />,
-    <img src="/public/Carusel03.jpg" alt="Carusel03" />,
-    <img src="/public/Carusel04.jpg" alt="Carusel04" />,
-    <img src="/public/Carusel05.jpg" alt="Carusel05" />,
+    <img src="/public/Carusel01.jpg" alt="Carusel01" className="w-full" />,
+    <img src="/public/Carusel02.jpg" alt="Carusel02" className="w-full" />,
+    <img src="/public/Carusel03.jpg" alt="Carusel03" className="w-full" />,
+    <img src="/public/Carusel04.jpg" alt="Carusel04" className="w-full" />,
+    <img src="/public/Carusel05.jpg" alt="Carusel05" className="w-full" />,
   ];
 
-  const prev = () => setActiveSlide((currentSlide) => (currentSlide === 0 ? slides.length - 1 : currentSlide - 1));
-  const next = () => setActiveSlide((currentSlide) => (currentSlide === slides.length - 1 ? 0 : currentSlide + 1));
+  const prev = () =>
+    setActiveSlide((currentSlide) =>
+      currentSlide === 0 ? slides.length - 1 : currentSlide - 1
+    );
+  const next = () =>
+    setActiveSlide((currentSlide) =>
+      currentSlide === slides.length - 1 ? 0 : currentSlide + 1
+    );
 
   useEffect(() => {
     const slideInterval = setInterval(next, 6000);
@@ -94,6 +98,6 @@ const Carousel = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Carousel
+export default Carousel;

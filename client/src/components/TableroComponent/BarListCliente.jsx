@@ -1,5 +1,5 @@
 import { InformationCircleIcon } from '@heroicons/react/solid';
-import { BarList, Card, Title, Flex, Text, Bold,Icon} from '@tremor/react';
+import { BarList, Card, Title, Flex, Text, Bold, Icon } from '@tremor/react';
 
 const BarlistCliente = ({ tramosClienteData }) => {
   if (!Array.isArray(tramosClienteData)) {
@@ -17,7 +17,7 @@ const BarlistCliente = ({ tramosClienteData }) => {
   );
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+    <div className="flex flex-row flex-wrap items-center justify-center gap-4">
       <div className="mt-6">
         <Card className="w-80" decoration="top" decorationColor="indigo">
           <Flex //title
@@ -54,7 +54,7 @@ const BarlistCliente = ({ tramosClienteData }) => {
             <Icon
               icon={InformationCircleIcon}
               variant="simple"
-              tooltip="Perdidas por Linea Comercial"
+              tooltip="Perdidas por Linea Industrial"
             />
           </Flex>
           <Flex className="mt-6">
@@ -79,7 +79,7 @@ const BarlistCliente = ({ tramosClienteData }) => {
             <Icon
               icon={InformationCircleIcon}
               variant="simple"
-              tooltip="Perdidas por Linea Comercial"
+              tooltip="Perdidas por Linea Residencial"
             />
           </Flex>
           <Flex className="mt-6">
