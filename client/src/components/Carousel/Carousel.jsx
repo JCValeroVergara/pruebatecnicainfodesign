@@ -31,7 +31,7 @@ const Carousel = () => {
     <div>
       <div
         id="default-carousel"
-        className="relative w-2/3 mx-auto"
+        className="relative w-2/3 mx-auto shadow-md overflow-hidden"
         data-carousel="slide"
       >
         {/* Carousel wrapper */}

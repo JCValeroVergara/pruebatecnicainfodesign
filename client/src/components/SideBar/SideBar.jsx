@@ -10,9 +10,11 @@ import {
   User,
 } from '../../Icons';
 import Datepicker from '../DatePicker/Datepicker';
+import { Link } from 'react-router-dom';
 
 const SideBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
 
   const handleOpen = () => {
     setIsOpen(!isOpen);
@@ -39,11 +41,11 @@ const SideBar = () => {
           {isOpen === true ? (
             <>
               <span className="flex-1 ml-3 max-md:hidden"></span>
-              <Previous className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white max-md:hidden" />
+              <Previous className="animate-pulse flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white max-md:hidden" />
             </>
           ) : (
             <>
-              <OpenSidebar className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white max-md:hidden" />
+              <OpenSidebar className="animate-pulse flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white max-md:hidden" />
               <span className="flex-1 max-md:hidden"></span>
             </>
           )}
@@ -121,7 +123,9 @@ const SideBar = () => {
               href="#"
               className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-yellow-500 dark:hover:bg-yellow-500 group"
             >
-              <SingIn className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
+              <Tooltip tooltipText="Texto del tooltip">
+                <SingIn className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
+              </Tooltip>
               <span
                 className={`flex-1 ml-9 max-md:hidden ${
                   isOpen ? 'block' : 'hidden'
@@ -133,20 +137,18 @@ const SideBar = () => {
             </a>
           </li>
           <li>
-            <a
-              href="#"
-              className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-yellow-500 dark:hover:bg-yellow-500 group"
-            >
-              <SingUp className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
-              <span
-                className={`flex-1 ml-9 max-md:hidden ${
-                  isOpen ? 'block' : 'hidden'
-                }
-                `}
-              >
-                Sign Up
-              </span>
-            </a>
+            <Link to="/">
+              <div className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-yellow-500 dark:hover:bg-yellow-500 group">
+                <SingUp className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
+                <span
+                  className={`flex-1 ml-9 max-md:hidden ${
+                    isOpen ? 'block' : 'hidden'
+                  }`}
+                >
+                  Sign Up
+                </span>
+              </div>
+            </Link>
           </li>
         </ul>
       </div>
