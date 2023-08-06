@@ -22,9 +22,27 @@
     --text-color: var(--text-color-dark);
     --bg-color: var(--bg-color-dark);
   }
+  
 }
 
 body {
   color: var(--text-color);
   background-color: var(--bg-color);
+}
+
+.custom-shadow {
+  position: relative;
+  animation: pulse-shadow 4s infinite; 
+}
+
+@keyframes pulse-shadow {
+  0% {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(252, 211, 77, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  }
 }
